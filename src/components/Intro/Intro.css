@@ -1,0 +1,140 @@
+.intro{
+    display: flex;
+    height: 70vh;
+    margin-top: 3.5rem;
+    padding-right: 2rem;
+}
+
+.i-left{
+    display: flex;
+    position: relative;
+    flex: 1;
+    flex-direction: column ;
+    gap: 1 rem;
+}
+
+.i-name{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.i-name>:nth-child(1){
+    color: var(--black);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.i-name>:nth-child(2){
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.i-name>:nth-child(3){
+    color: var(--grey);
+    font-weight: 120;
+    font-size: 2rem;
+    margin-bottom: 10px;
+    padding-top: 1rem;
+}
+
+.i-button{
+    width: 6rem;
+    height: 2rem;
+}
+
+.i-icons{
+    margin-top: 3rem;
+    display: flex;
+    gap: 0 rem;
+}
+
+.i-icons>*{
+    transform: scale(0.5);
+}
+
+
+.i-icons>*:hover{
+    cursor: pointer;
+}
+
+.i-right{
+    flex: 1;
+    position: relative;
+}
+
+.i-right>*{
+    position: absolute;
+    z-index: 1;
+    transform: scale(1);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.i-photo{
+    max-width: 350px;
+    border-radius: 50px;
+}
+ 
+.i-right>:nth-child(2){
+    transform: scale(0.5);
+    top: -15%;
+    left: -34%;
+    border-radius: 50%;
+    padding: 0;
+}
+
+.floatingDiv-img{
+    max-width: 8rem;
+}
+
+
+
+.blur{
+    position: absolute;
+    width: 18rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color:#edd0ff ;
+    filter: blur(72px);
+    z-index: -10;
+    top: 28%;
+    left: 67%;
+}
+
+.blur-2{
+    position: absolute;
+    width: 18rem;
+    height: 10rem;
+    border-radius: 50%;
+    background-color:#edd0ff ;
+    filter: blur(72px);
+    z-index: -10;
+    top: 88%;
+    left: 27%;
+}
+
+@media screen and (max-width: 480px) {
+   .intro{
+    flex-direction: column;
+    max-width: fit-content;
+   }
+   .i-right{
+    transform: scale(0.8);
+   }
+   .i-name{
+    align-items: center;
+   }
+
+   .i-right .blur{
+    z-index: -100;
+   }
+   .i-right .blur-2{
+    z-index: -100;
+   }
+   .floatingDiv-img{
+    display: flex;
+   }
+}
